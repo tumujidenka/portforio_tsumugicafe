@@ -1,0 +1,452 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+}
+.header nav {
+  float: right;
+  margin-right: 40px;
+}
+.header nav ul {
+  display: flex;
+}
+.header nav ul li {
+  color: #FAF9F9;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.header nav ul li a {
+  line-height: 60px;
+  align-items: center;
+  text-shadow: 1px 1px 3px #000;
+  transition: all 0.3s;
+}
+.header nav ul li a:hover {
+  color: #e03131;
+}
+.header nav ul li + li {
+  margin-left: 25px;
+}
+
+.main-visual {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../media/mainvisual.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.main-visual img {
+  position: absolute;
+  max-width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  margin-top: 20px;
+  background-image: url(../media/menu_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu .headline {
+  height: 300px;
+  width: 100%;
+}
+.menu .headline h1 {
+  color: #FAF9F9;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 300px;
+  align-items: center;
+  text-align: center;
+}
+.menu .lineup {
+  background-color: #fff;
+}
+
+.menu_contents {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  display: flex;
+}
+.menu_contents .leftside {
+  border-right: 1px solid #000;
+}
+.menu_contents .leftside, .menu_contents .rightside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_contents .leftside h2, .menu_contents .rightside h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.menu_contents .leftside h2::after, .menu_contents .rightside h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e03131;
+}
+.menu_contents .leftside ul, .menu_contents .rightside ul {
+  width: 100%;
+}
+.menu_contents .leftside p, .menu_contents .rightside p {
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.menu_lists {
+  margin-top: 90px;
+  padding-left: 45px;
+}
+.menu_lists li + li {
+  margin-top: 25px;
+}
+.menu_lists li {
+  display: flex;
+  justify-content: space-between;
+}
+.menu_lists .name {
+  border-bottom: 1px dashed #000;
+  line-height: 1.8em;
+  flex: 1;
+}
+.menu_lists .price {
+  width: 90px;
+  padding-left: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.rightside .categori:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.about {
+  background-image: url(../media/about_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about .headline {
+  height: 300px;
+  width: 100%;
+}
+.about .headline h1 {
+  color: #FAF9F9;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 300px;
+  align-items: center;
+  text-align: center;
+}
+.about .description {
+  background-color: #fff;
+}
+
+.description_detail {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.description_detail h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 100px auto 120px;
+}
+.description_detail h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e03131;
+}
+.description_detail .description_text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  line-height: 25px;
+  max-width: 95%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.description_detail .description_text .upper, .description_detail .description_text .lower {
+  display: flex;
+  flex-direction: row;
+}
+.description_detail .description_text .upper .leftpart, .description_detail .description_text .upper .rightpart, .description_detail .description_text .lower .leftpart, .description_detail .description_text .lower .rightpart {
+  display: inline-block;
+  width: 48%;
+  margin: 0 auto;
+}
+.description_detail .description_text .upper .leftpart > :nth-child(1), .description_detail .description_text .upper .rightpart > :nth-child(1), .description_detail .description_text .lower .leftpart > :nth-child(1), .description_detail .description_text .lower .rightpart > :nth-child(1) {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.description_detail .description_text .lower {
+  margin-top: 60px;
+}
+.description_detail .readmore {
+  margin: 0 auto;
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+}
+.description_detail .readmore::before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  border-top: 2px solid #e03131;
+  border-left: 2px solid #e03131;
+  top: 0;
+  left: -45px;
+  transition: all 0.2s;
+}
+.description_detail .readmore::after {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  border-bottom: 2px solid #e03131;
+  border-right: 2px solid #e03131;
+  bottom: 0;
+  right: -45px;
+  transition: all 0.2s;
+}
+.description_detail .readmore:hover {
+  cursor: pointer;
+}
+.description_detail .readmore:hover::before, .description_detail .readmore:hover::after {
+  width: 166px;
+  height: inherit;
+  pointer-events: none;
+}
+
+.location {
+  background-image: url(../media/location_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.location .headline {
+  height: 300px;
+  width: 100%;
+}
+.location .headline h1 {
+  color: #FAF9F9;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 300px;
+  align-items: center;
+  text-align: center;
+}
+.location .map {
+  background-color: #fff;
+}
+
+.map_zone {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 180px;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map_zone h2.categori {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto 95px;
+}
+.map_zone h2.categori::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e03131;
+}
+.map_zone .map_contents {
+  width: 100%;
+  max-width: 97%;
+  margin: 0 auto;
+}
+.map_zone .map_contents .map_google {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.map_zone .map_contents .map_google iframe {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  filter: grayscale(100%);
+}
+.map_zone .map_contents .supplement {
+  widows: 100%;
+  margin-top: 30px;
+}
+.map_zone .map_contents .supplement p {
+  font-size: 0.9rem;
+  display: block;
+  text-align: left;
+  line-height: 1.5em;
+}
+.map_zone .map_contents .supplement p + p {
+  margin-top: 20px;
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 0.5rem;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    margin-top: 10px;
+    background-image: url(../media/menu_bg_sp.png);
+    background-size: cover;
+    background-attachment: local;
+    background-position-y: top;
+  }
+  .menu .headline {
+    height: 90px;
+    width: 100%;
+  }
+  .menu .headline h1 {
+    color: #FAF9F9;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 90px;
+    align-items: center;
+    text-align: center;
+  }
+  .menu_contents {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 110px;
+  }
+  .menu_contents .leftside, .menu_contents .rightside {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu_contents .leftside h2, .menu_contents .rightside h2 {
+    font-size: 1.25rem;
+  }
+  .leftside {
+    border-right: none;
+  }
+  .rightside .categori:nth-of-type(2) {
+    margin-top: 45px;
+  }
+  .rightside .categori {
+    margin-top: 45px;
+  }
+  .menu_lists {
+    margin-top: 45px;
+    padding-left: 0;
+  }
+  .menu_lists .price {
+    padding-left: 0;
+    width: 13%;
+    text-align: right;
+  }
+  .about {
+    background-attachment: local;
+  }
+  .about .headline {
+    height: 90px;
+    width: 100%;
+  }
+  .about .headline h1 {
+    color: #FAF9F9;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 90px;
+    align-items: center;
+    text-align: center;
+  }
+  .about h2 {
+    font-size: 1.25rem;
+  }
+  .description_detail {
+    margin-bottom: 80px;
+  }
+  .description_detail .categori {
+    margin: 35px auto 55px;
+  }
+  .description_detail .description_text {
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .description_detail .description_text .upper, .description_detail .description_text .lower {
+    flex-direction: column;
+  }
+  .description_detail .description_text .upper .leftpart, .description_detail .description_text .upper .rightpart, .description_detail .description_text .lower .leftpart, .description_detail .description_text .lower .rightpart {
+    display: inline-block;
+    width: 100%;
+  }
+  .description_detail .description_text .upper .leftpart > :nth-child(1), .description_detail .description_text .upper .rightpart > :nth-child(1), .description_detail .description_text .lower .leftpart > :nth-child(1), .description_detail .description_text .lower .rightpart > :nth-child(1) {
+    margin-bottom: 5px;
+  }
+  .description_detail .description_text .upper .leftpart > :nth-child(2), .description_detail .description_text .upper .rightpart > :nth-child(2), .description_detail .description_text .lower .leftpart > :nth-child(2), .description_detail .description_text .lower .rightpart > :nth-child(2) {
+    margin-bottom: 40px;
+  }
+  .description_detail .description_text .lower {
+    margin-top: 0;
+  }
+  .location {
+    background-attachment: local;
+  }
+  .location .headline {
+    height: 90px;
+    width: 100%;
+  }
+  .location .headline h1 {
+    color: #FAF9F9;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 90px;
+    align-items: center;
+    text-align: center;
+  }
+  .location .map_zone {
+    margin: 0 auto 90px;
+    padding-top: 40px;
+  }
+  .location .map_zone h2.categori {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+  }
+}/*# sourceMappingURL=style.css.map */
